@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{582FBD39-4BA6-49F4-9EC1-CEB721677470}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HubAppUniversal</RootNamespace>
+    <AssemblyName>HubAppUniversal.Windows</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <PackageCertificateKeyFile>HubAppUniversal.Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>E:\Code\Lab\制作sdkVSIX\</AppxPackageDir>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="HubPage.xaml.cs">
+      <DependentUpon>HubPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SectionPage.xaml.cs">
+      <DependentUpon>SectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemPage.xaml.cs">
+      <DependentUpon>ItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="HubAppUniversal.Windows_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\WideLogo.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HubPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItemPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="AmapSDK For Windows Phone, Version=1.0">
+      <Name>AMap SDK for C#, C++, or Visual Basic on Windows</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\HubAppUniversal.Shared\HubAppUniversal.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName) == Debug IF $(PlatformName) == x86 goto Debugx86
+IF $(ConfigurationName) == Debug IF $(PlatformName) == x64 goto Debugx64
+IF $(ConfigurationName) == Release IF $(PlatformName) == ARM goto ReleaseARM
+IF $(ConfigurationName) == Release IF $(PlatformName) == x86 goto Releasex86
+IF $(ConfigurationName) == Release IF $(PlatformName) == x64 goto Releasex64
+
+:DebugARM
+echo build SDK-DebugARM 
+copy $(SolutionDir)ARM\Debug\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Debug\ARM\WinRTDXMapLib.Windows.dll /Y
+exit 0
+
+:Debugx86
+echo build SDK-Debugx86
+copy $(SolutionDir)Win32\Debug\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Debug\x86\WinRTDXMapLib.Windows.dll /Y
+exit 0
+
+:Debugx64
+echo build SDK-Debugx64
+copy $(SolutionDir)x64\Debug\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Debug\x64\WinRTDXMapLib.Windows.dll /Y
+exit 0
+
+
+:ReleaseARM
+echo build SDK-ReleaseARM
+copy $(SolutionDir)ARM\Release\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Retail\ARM\WinRTDXMapLib.Windows.dll /Y
+
+copy $(TargetDir)crypto.dll $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\crypto.dll  /Y
+copy $(TargetDir)crypto.xml $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\crypto.xml /Y
+copy $(TargetDir)WinRTDXMapLib.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\WinRTDXMapLib.winmd /Y
+copy $(TargetDir)Com.AMap.Api.Services.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.winmd /Y
+
+copy $(TargetDir)Com.AMap.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\ARM\Com.AMap.winmd /Y
+
+copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\ARM\Com.AMap.XML /Y
+copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x86\Com.AMap.XML /Y
+copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x64\Com.AMap.XML /Y
+copy $(SolutionDir)SearchRtComponent\bin\Document\Com.AMap.Api.Services.xml  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.xml /Y
+exit 0
+
+:Releasex86
+echo build SDK-Releasex86
+copy $(SolutionDir)Win32\Release\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Retail\x86\WinRTDXMapLib.Windows.dll /Y
+copy $(TargetDir)Com.AMap.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x86\Com.AMap.winmd /Y
+exit 0
+
+:Releasex64
+echo build SDK-Releasex64
+copy $(SolutionDir)x64\Release\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Retail\x64\WinRTDXMapLib.Windows.dll /Y
+copy $(TargetDir)Com.AMap.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x64\Com.AMap.winmd /Y
+exit 0
+
+exit 0</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

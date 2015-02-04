@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="HubAppUniversal.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HubAppUniversal">
+    <Application.Resources>
+        <x:String x:Key="section1">地图</x:String>
+        <x:String x:Key="section2">搜索</x:String>
+        <x:String x:Key="AppName">高德地图WinRT demo</x:String>
+    </Application.Resources>
+</Application>

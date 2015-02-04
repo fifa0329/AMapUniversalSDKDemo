@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="HubAppUniversal.MapDisplay.ViewChange"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OfficalDemo.MapDisplay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center"   >
+                    <TextBlock x:Name="heading" Text="heading:"></TextBlock>
+                    <TextBlock x:Name="pitch" Text="pitch:"></TextBlock>
+                    <TextBlock x:Name="center" Text="center:"></TextBlock>
+                    <TextBlock x:Name="zoomlevel" Text="zoomlevel:"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"   Background="#7FBA3434">
+                    <Button Content="北京" Click="ToBeijing"></Button>
+                    <Button Content="上海" Click="ToShanghai"></Button>
+                    <Button Content="广州" Click="ToGuangzhouRegion"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" x:Name="ContentGrid"></Grid>
+
+
+    </Grid>
+</Page>

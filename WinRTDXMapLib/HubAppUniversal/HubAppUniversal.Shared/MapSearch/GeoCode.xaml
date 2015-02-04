@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="HubAppUniversal.MapSearch.GeoCode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center"   >
+                    <TextBox GotFocus="OnGotFocus" LostFocus="OnLostFocus"  x:Name="addressInputTextBox" TextChanged="AddressInputTextBox_OnTextChanged"></TextBox>
+                    <Button Content="查询" Click="SearchButton_OnClick"></Button>
+                    <TextBlock x:Name="addressOutputTextblock" Text="点击后可以查询该经纬度对应的地址" ></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" x:Name="ContentGrid"></Grid>
+
+        <Grid Grid.Row="1" Background="#7F808080"  x:Name="hintCanvas" MaxHeight="400" VerticalAlignment="Top">
+            <ListBox x:Name="listBox" Background="Transparent" SelectionChanged="ListBox_OnSelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="14*"/>
+                                <RowDefinition Height="13*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{Binding Name}" />
+                            <TextBlock Grid.Row="1" Text="{Binding District}"  />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </Grid>
+
+
+    </Grid>
+</Page>

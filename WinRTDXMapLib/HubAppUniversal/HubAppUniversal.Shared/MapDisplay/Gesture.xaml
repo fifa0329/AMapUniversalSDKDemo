@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="HubAppUniversal.MapDisplay.Gesture"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OfficalDemo.MapDisplay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+
+
+
+
+
+
+
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"   Background="#7FBA3434">
+                <CheckBox Margin="4,0" Content="移"    MinWidth="30" Checked="Move_OnChecked" Unchecked="Move_OnUnchecked" ></CheckBox>
+                <CheckBox Margin="4,0" Content="转"    MinWidth="30"  Checked="Rotate_OnChecked" Unchecked="Rotate_OnUnchecked"/>
+                <CheckBox Margin="4,0" Content="斜"    MinWidth="30" Checked="Tilt_OnChecked" Unchecked="Tilt_OnUnchecked"/>
+                <CheckBox Margin="4,0" Content="缩"    MinWidth="30" Checked="Zoom_OnChecked" Unchecked="Zoom_OnUnchecked"/>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" x:Name="ContentGrid"></Grid>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="OfficalDemo.MapDisplay.OverlayManagement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OfficalDemo.MapDisplay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="点" Click="MapIcon_Click"/>
+                    <Button Content="线" Click="Polyline_Click"></Button>
+                    <Button Content="圆" Click="Circle_Click"></Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="多边形" Click="Polygon_OnClick"/>
+                    <Button Content="groundOverlay" Click="GroundOverlay_OnClick"></Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="隐身" Click="HideRandom_Click"></Button>
+                    <Button Content="删除" Click="RemoveRandom_Click"></Button>
+                    <Button Content="清空" Click="ClearAll_Click"></Button>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" x:Name="ContentGrid"></Grid>
+
+
+    </Grid>
+</Page>

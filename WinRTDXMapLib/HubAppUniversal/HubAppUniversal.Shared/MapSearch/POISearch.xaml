@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="HubAppUniversal.MapSearch.POISearch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center"   >
+                    <Button Content="ID查询" Click="IdSearch_OnClick"></Button>
+                    <Button Content="关键字查询" Click="KeywordSearch_OnClick"></Button>
+                    <Button Content="周边查询" Click="NearbySearch_OnClick"></Button>
+                    <Button Content="多边形查询" Click="PolygonSearch_OnClick"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" x:Name="ContentGrid"></Grid>
+
+
+    </Grid>
+</Page>
