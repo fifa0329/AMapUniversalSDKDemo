@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System.Diagnostics;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Animation;
-using Windows.UI.Xaml.Navigation;
 using Com.AMap.Api.Services;
 using Com.AMap.Maps.Core;
 using HubAppUniversal.Common;
@@ -24,44 +13,48 @@ using HubAppUniversal.Common;
 namespace HubAppUniversal
 {
     /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
+    ///     Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     public sealed partial class App : Application
     {
 #if WINDOWS_PHONE_APP
-        private TransitionCollection transitions;
+        private Windows.UI.Xaml.Media.Animation.TransitionCollection transitions;
 #endif
 
         /// <summary>
-        /// Initializes the singleton instance of the <see cref="App"/> class. This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
+        ///     Initializes the singleton instance of the <see cref="App" /> class. This is the first line of authored code
+        ///     executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += this.OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
 
-
-            AMapConfig.Key = "1e645042ac053b9830877a0ae52c8941";
-            AMapSearchConfig.Key = "1e645042ac053b9830877a0ae52c8941";
+#if WINDOWS_PHONE_APP
+            AMapConfig.Key = "c56b99e63e8be66079d587f004658703";
+            AMapSearchConfig.Key = "c56b99e63e8be66079d587f004658703";
+#else
+            AMapConfig.Key = "083acc89d92503fe4cd6df0407c4f9f5";
+            AMapSearchConfig.Key = "083acc89d92503fe4cd6df0407c4f9f5";
+#endif
         }
 
         /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used when the application is launched to open a specific file, to display
-        /// search results, and so forth.
+        ///     Invoked when the application is launched normally by the end user.  Other entry points
+        ///     will be used when the application is launched to open a specific file, to display
+        ///     search results, and so forth.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected async override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 
-            Frame rootFrame = Window.Current.Content as Frame;
+            var rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -97,10 +90,10 @@ namespace HubAppUniversal
             if (rootFrame.Content == null)
             {
 #if WINDOWS_PHONE_APP
-                // Removes the turnstile navigation for startup.
+    // Removes the turnstile navigation for startup.
                 if (rootFrame.ContentTransitions != null)
                 {
-                    this.transitions = new TransitionCollection();
+                    this.transitions = new Windows.UI.Xaml.Media.Animation.TransitionCollection();
                     foreach (var c in rootFrame.ContentTransitions)
                     {
                         this.transitions.Add(c);
@@ -114,7 +107,7 @@ namespace HubAppUniversal
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(HubPage), e.Arguments))
+                if (!rootFrame.Navigate(typeof (HubPage), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }
@@ -125,23 +118,23 @@ namespace HubAppUniversal
         }
 
 #if WINDOWS_PHONE_APP
-        /// <summary>
-        /// Restores the content transitions after the app has launched.
-        /// </summary>
-        /// <param name="sender">The object where the handler is attached.</param>
-        /// <param name="e">Details about the navigation event.</param>
-        private void RootFrame_FirstNavigated(object sender, NavigationEventArgs e)
+    /// <summary>
+    /// Restores the content transitions after the app has launched.
+    /// </summary>
+    /// <param name="sender">The object where the handler is attached.</param>
+    /// <param name="e">Details about the navigation event.</param>
+        private void RootFrame_FirstNavigated(object sender, Windows.UI.Xaml.Navigation.NavigationEventArgs e)
         {
             var rootFrame = sender as Frame;
-            rootFrame.ContentTransitions = this.transitions ?? new TransitionCollection() { new NavigationThemeTransition() };
+            rootFrame.ContentTransitions = this.transitions ?? new Windows.UI.Xaml.Media.Animation.TransitionCollection() { new Windows.UI.Xaml.Media.Animation.NavigationThemeTransition() };
             rootFrame.Navigated -= this.RootFrame_FirstNavigated;
         }
 #endif
 
         /// <summary>
-        /// Invoked when application execution is being suspended.  Application state is saved
-        /// without knowing whether the application will be terminated or resumed with the contents
-        /// of memory still intact.
+        ///     Invoked when application execution is being suspended.  Application state is saved
+        ///     without knowing whether the application will be terminated or resumed with the contents
+        ///     of memory still intact.
         /// </summary>
         private async void OnSuspending(object sender, SuspendingEventArgs e)
         {

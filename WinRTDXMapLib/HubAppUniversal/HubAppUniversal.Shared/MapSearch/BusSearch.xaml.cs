@@ -13,6 +13,7 @@ using Com.AMap.Api.Maps.Model;
 using Com.AMap.Api.Maps.OverLay;
 using Com.AMap.Api.Services;
 using Com.AMap.Api.Services.Results;
+using Com.AMap.Maps.Core;
 
 namespace HubAppUniversal.MapSearch
 {
@@ -29,6 +30,8 @@ namespace HubAppUniversal.MapSearch
             this.InitializeComponent();
             ContentGrid.Children.Add(aMapControl);
             aMapControl.Layers.Add(baseLayer);
+
+            
         }
 
         /// <summary>

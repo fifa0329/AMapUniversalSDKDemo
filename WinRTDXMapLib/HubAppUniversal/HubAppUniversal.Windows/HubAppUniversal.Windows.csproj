@@ -144,14 +144,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="AmapSDK For Windows Phone, Version=1.0">
-      <Name>AMap SDK for C#, C++, or Visual Basic on Windows</Name>
-    </SDKReference>
-    <SDKReference Include="Microsoft.VCLibs, version=12.0">
-      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
-    </SDKReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
@@ -185,7 +177,6 @@ echo build SDK-ReleaseARM
 copy $(SolutionDir)ARM\Release\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.dll $(SolutionDir)AMapVSIXForWindows\Redist\Retail\ARM\WinRTDXMapLib.Windows.dll /Y
 
 copy $(TargetDir)crypto.dll $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\crypto.dll  /Y
-copy $(TargetDir)crypto.xml $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\crypto.xml /Y
 copy $(TargetDir)WinRTDXMapLib.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\WinRTDXMapLib.winmd /Y
 copy $(TargetDir)Com.AMap.Api.Services.winmd $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.winmd /Y
 
@@ -195,6 +186,7 @@ copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVS
 copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x86\Com.AMap.XML /Y
 copy $(SolutionDir)ApiForWindows\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\x64\Com.AMap.XML /Y
 copy $(SolutionDir)SearchRtComponent\bin\Document\Com.AMap.Api.Services.xml  $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.xml /Y
+copy $(TargetDir)crypto.xml $(SolutionDir)AMapVSIXForWindows\References\CommonConfiguration\Neutral\crypto.xml /Y
 exit 0
 
 :Releasex86

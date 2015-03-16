@@ -1,7 +1,9 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 using System;
+using Windows.ApplicationModel.Store;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -91,6 +93,14 @@ namespace HubAppUniversal.MapSearch
 
             }
             aMapControl.Layers.Add(layer);
+        }
+
+        private async void GetAppid(object sender, RoutedEventArgs e)
+        {
+            Guid guid = CurrentApp.AppId;
+            string productID = guid.ToString();
+            MessageDialog msgbox = new MessageDialog(productID);
+            await msgbox.ShowAsync();   
         }
     }
 }

@@ -76,14 +76,8 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\car.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\CYAN.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\GREEN.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Logo.scale-240.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\man.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\marker_gps_no_sharing.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\SmallLogo.scale-240.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-240.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Square71x71Logo.scale-240.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.scale-240.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Assets\WideLogo.scale-240.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\YELLOW.png" />
     <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />

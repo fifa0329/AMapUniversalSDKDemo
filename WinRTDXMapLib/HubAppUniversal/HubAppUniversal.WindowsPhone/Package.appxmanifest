@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="6ece46d6-854f-4553-a175-eada9dbec976" Publisher="CN=lingxiang.wang" Version="1.0.0.1" />
-  <mp:PhoneIdentity PhoneProductId="692cc949-1e3b-44e4-bbfb-5604acf357c6" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="59546.API" Publisher="CN=D40E61A2-D33D-4C93-B8C2-10B006C4441D" Version="1.1.0.7" />
+  <mp:PhoneIdentity PhoneProductId="430bfd9f-59aa-4ca2-b9ec-cd9b059b321d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>HubAppUniversal.WindowsPhone</DisplayName>
-    <PublisherDisplayName>lingxiang.wang</PublisherDisplayName>
+    <DisplayName>高德地图API</DisplayName>
+    <PublisherDisplayName>金靴欧文</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,8 +16,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HubAppUniversal.WindowsPhone.App">
-      <m3:VisualElements DisplayName="HubAppUniversal.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="HubAppUniversal.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+      <m3:VisualElements DisplayName="高德地图API" Square150x150Logo="Assets\150150.png" Square44x44Logo="Assets\4444.png" Description="HubAppUniversal.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\310150.png" Square71x71Logo="Assets\7171.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>

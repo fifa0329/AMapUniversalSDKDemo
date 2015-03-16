@@ -1,8 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.40121.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinRTDXMapLib", "WinRTDXMapLib", "{D216BBBC-E06E-40FE-9CE8-46E9DE573381}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinRTDXMapLib.Windows", "WinRTDXMapLib\WinRTDXMapLib.Windows\WinRTDXMapLib.Windows.vcxproj", "{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinRTDXMapLib.WindowsPhone", "WinRTDXMapLib\WinRTDXMapLib.WindowsPhone\WinRTDXMapLib.WindowsPhone.vcxproj", "{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinRTDXMapLib.Shared", "WinRTDXMapLib\WinRTDXMapLib.Shared\WinRTDXMapLib.Shared.vcxitems", "{24C8D26D-4AB8-48B4-8670-7EC0822D99DB}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7BC103EC-B145-4501-972B-8489ED9D9059}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HubAppUniversal", "HubAppUniversal", "{D66C4974-2861-4422-B685-D225ACBAA306}"
@@ -15,8 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HubAppUniversal.WindowsPhon
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		WinRTDXMapLib\WinRTDXMapLib.Shared\WinRTDXMapLib.Shared.vcxitems*{3d306757-ce25-4c6f-b9a0-6a4bdc8aa0a5}*SharedItemsImports = 4
+		WinRTDXMapLib\WinRTDXMapLib.Shared\WinRTDXMapLib.Shared.vcxitems*{c422dc9d-27da-4640-8658-2f03d0b0e2b4}*SharedItemsImports = 4
 		HubAppUniversal\HubAppUniversal.Shared\HubAppUniversal.Shared.projitems*{582fbd39-4ba6-49f4-9ec1-ceb721677470}*SharedItemsImports = 4
 		HubAppUniversal\HubAppUniversal.Shared\HubAppUniversal.Shared.projitems*{9ab60b07-e00a-404c-bfe5-8619b3c4f9bd}*SharedItemsImports = 13
+		WinRTDXMapLib\WinRTDXMapLib.Shared\WinRTDXMapLib.Shared.vcxitems*{24c8d26d-4ab8-48b4-8670-7ec0822d99db}*SharedItemsImports = 9
 		HubAppUniversal\HubAppUniversal.Shared\HubAppUniversal.Shared.projitems*{f12f0384-d12d-4afd-b05e-58ddffaf5cab}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +45,48 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|ARM.Build.0 = Debug|ARM
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|Win32.Build.0 = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|x64.ActiveCfg = Debug|x64
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|x64.Build.0 = Debug|x64
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Debug|x86.Build.0 = Debug|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|Any CPU.ActiveCfg = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|ARM.ActiveCfg = Release|ARM
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|ARM.Build.0 = Release|ARM
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|Win32.ActiveCfg = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|Win32.Build.0 = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|x64.ActiveCfg = Release|x64
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|x64.Build.0 = Release|x64
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|x86.ActiveCfg = Release|Win32
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5}.Release|x86.Build.0 = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|ARM.Build.0 = Debug|ARM
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|Win32.Build.0 = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|x64.ActiveCfg = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|x86.ActiveCfg = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Debug|x86.Build.0 = Debug|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|ARM.ActiveCfg = Release|ARM
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|ARM.Build.0 = Release|ARM
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|Win32.ActiveCfg = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|Win32.Build.0 = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|x64.ActiveCfg = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|x86.ActiveCfg = Release|Win32
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4}.Release|x86.Build.0 = Release|Win32
 		{582FBD39-4BA6-49F4-9EC1-CEB721677470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{582FBD39-4BA6-49F4-9EC1-CEB721677470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{582FBD39-4BA6-49F4-9EC1-CEB721677470}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -107,6 +160,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{3D306757-CE25-4C6F-B9A0-6A4BDC8AA0A5} = {D216BBBC-E06E-40FE-9CE8-46E9DE573381}
+		{C422DC9D-27DA-4640-8658-2F03D0B0E2B4} = {D216BBBC-E06E-40FE-9CE8-46E9DE573381}
+		{24C8D26D-4AB8-48B4-8670-7EC0822D99DB} = {D216BBBC-E06E-40FE-9CE8-46E9DE573381}
 		{9AB60B07-E00A-404C-BFE5-8619B3C4F9BD} = {D66C4974-2861-4422-B685-D225ACBAA306}
 		{582FBD39-4BA6-49F4-9EC1-CEB721677470} = {D66C4974-2861-4422-B685-D225ACBAA306}
 		{F12F0384-D12D-4AFD-B05E-58DDFFAF5CAB} = {D66C4974-2861-4422-B685-D225ACBAA306}

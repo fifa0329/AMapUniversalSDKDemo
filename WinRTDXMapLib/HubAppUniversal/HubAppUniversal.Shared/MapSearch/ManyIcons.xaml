@@ -19,6 +19,8 @@
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center"   >
                     <Button Content="已有层加点" Click="ExistedLayerAdd"></Button>
                     <Button Content="先加点再加层" Click="AddLayerContainIcons"></Button>
+                    <Button Content="显示APPID" Click="GetAppid"></Button>
+
                 </StackPanel>
             </StackPanel>
         </Grid>

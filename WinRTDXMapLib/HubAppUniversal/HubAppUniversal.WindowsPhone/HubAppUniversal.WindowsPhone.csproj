@@ -17,7 +17,7 @@
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>E:\Code\Lab\制作sdkVSIX\Universal打包\</AppxPackageDir>
-    <AppxBundlePlatforms>x86|arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -100,14 +100,15 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Logo.scale-240.png" />
-    <Content Include="Assets\SmallLogo.scale-240.png" />
-    <Content Include="Assets\SplashScreen.scale-240.png" />
-    <Content Include="Assets\Square71x71Logo.scale-240.png" />
-    <Content Include="Assets\StoreLogo.scale-240.png" />
-    <Content Include="Assets\WideLogo.scale-240.png" />
+    <Content Include="Assets\150150.png" />
+    <Content Include="Assets\310150.png" />
+    <Content Include="Assets\4444.png" />
+    <Content Include="Assets\7171.png" />
+    <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\HubBackground.theme-dark.png" />
     <Content Include="Assets\HubBackground.theme-light.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="HubPage.xaml">
@@ -124,7 +125,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="AmapSDK For Windows Phone, Version=1.01">
+    <SDKReference Include="AmapSDK For Windows Phone, Version=1.0316">
       <Name>AMap SDK for C#, C++, or Visual Basic on Windows Phone</Name>
     </SDKReference>
     <SDKReference Include="Microsoft.VCLibs, version=12.0">
@@ -160,7 +161,6 @@ echo build SDK-ReleaseARM
 copy $(SolutionDir)ARM\Release\WinRTDXMapLib.WindowsPhone\WinRTDXMapLib.WindowsPhone.dll $(SolutionDir)AMapVSIXForPhone\Redist\Retail\ARM\WinRTDXMapLib.WindowsPhone.dll /Y
 
 copy $(TargetDir)crypto.dll $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\crypto.dll  /Y
-copy $(TargetDir)crypto.xml $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\crypto.xml /Y
 copy $(TargetDir)WinRTDXMapLib.winmd $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\WinRTDXMapLib.winmd /Y
 copy $(TargetDir)Com.AMap.Api.Services.winmd $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.winmd /Y
 
@@ -169,6 +169,7 @@ copy $(TargetDir)Com.AMap.winmd $(SolutionDir)AMapVSIXForPhone\References\Common
 copy $(SolutionDir)ApiForPhone\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\ARM\Com.AMap.XML /Y
 copy $(SolutionDir)ApiForPhone\bin\Document\Com.AMap.XML  $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\x86\Com.AMap.XML /Y
 copy $(SolutionDir)SearchRtComponent\bin\Document\Com.AMap.Api.Services.xml  $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\Com.AMap.Api.Services.xml /Y
+copy $(TargetDir)crypto.xml $(SolutionDir)AMapVSIXForPhone\References\CommonConfiguration\Neutral\crypto.xml /Y
 exit 0
 
 :Releasex86
