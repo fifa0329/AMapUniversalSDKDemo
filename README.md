@@ -13,4 +13,5 @@ AMapVSIXForWindowsPhone.vsix
 
 2. 然后在VS里面，选择添加SDK（注意不是引用），即可使用
 
-3.有问题，欢迎在issue里面添加 
+
+3. 有问题，欢迎在issue里面添加 
